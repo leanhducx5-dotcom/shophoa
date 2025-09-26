@@ -11,6 +11,7 @@ body {
   color: #333; /* Màu chữ */
 }
 
+
 /* Bố cục header */
 .header {
   background: #ff4d6d;
@@ -37,7 +38,21 @@ body {
 .header nav {
   margin-top: 10px;
 }
+@media (max-width: 600px) {
+  .user-actions {
+    position: static; /* không absolute nữa */
+    margin-top: 10px;
+    justify-content: center;
+  }
 
+  .header {
+    text-align: center;
+  }
+
+  .header nav {
+    margin-top: 10px;
+  }
+}
 
 
 /* Khu vực tài khoản và giỏ hàng */
