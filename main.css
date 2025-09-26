@@ -16,7 +16,7 @@ body {
 .header {
   background: #ff4d6d;
   color: white;
-  padding: 15px;
+  padding: 40px 15px;
   text-align: center;
   position: relative;
 }
@@ -38,21 +38,7 @@ body {
 .header nav {
   margin-top: 10px;
 }
-@media (max-width: 600px) {
-  .user-actions {
-    position: static; /* không absolute nữa */
-    margin-top: 10px;
-    justify-content: center;
-  }
 
-  .header {
-    text-align: center;
-  }
-
-  .header nav {
-    margin-top: 10px;
-  }
-}
 
 
 /* Khu vực tài khoản và giỏ hàng */
