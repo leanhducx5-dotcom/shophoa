@@ -1,0 +1,303 @@
+/* Reset mặc định: xóa khoảng cách mặc định của trình duyệt */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Tính toán kích thước phần tử bao gồm cả padding & border */
+}
+
+body {
+  font-family: Arial, sans-serif; /* Font chữ chính */
+  line-height: 1.6; /* Chiều cao dòng */
+  color: #333; /* Màu chữ */
+}
+
+/* Bố cục header */
+.header {
+  background: #ff4d6d;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: relative;
+}
+/* Style mặc định cho tất cả link trong menu */
+.header nav a {
+  color: white;              /* Chữ màu trắng */
+  text-decoration: none;     /* Bỏ gạch chân mặc định */
+  margin: 0 10px;            /* Cách đều nhau ngang 10px */
+  font-weight: bold;         /* Chữ đậm hơn */
+  transition: 0.3s;          /* Hiệu ứng mượt khi hover */
+}
+
+/* Khi rê chuột vào thì hiện gạch chân */
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+
+.header nav {
+  margin-top: 10px;
+}
+
+
+
+/* Khu vực tài khoản và giỏ hàng */
+.user-actions {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.user-actions a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.user-actions a:hover {
+  text-decoration: underline;
+}
+
+
+/* Banner với ảnh nền */
+.banner {
+  background: url("https://hoatuoihanhdung.com/upload/images/057c06f2f286f8a3d0a487cd21987bfc.jpeg") no-repeat center/cover;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4); /* lớp phủ mờ để chữ dễ đọc */
+}
+
+.banner-content {
+  position: relative;
+  z-index: 1; /* đảm bảo chữ nổi lên trên */
+}
+
+.banner h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+.banner p {
+  font-size: 18px;
+}
+.banner button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.banner button:hover {
+  background: #e63950;
+}
+
+
+/* ===== Sản phẩm gợi ý hôm nay ===== */
+.suggest-products {
+  padding: 40px 20px;
+  text-align: center;
+  background: #daeef8; /* nền trắng */
+  color: #000000;      /* chữ đen */
+}
+.suggest-products h2 {
+  margin-bottom: 20px;
+  color: #000000; /* tiêu đề đen */
+  font-style: normal; /* bỏ italic nếu muốn đồng bộ */
+}
+
+/* ===== Products (Sản phẩm nổi bật) ===== */
+.products {
+  padding: 40px 20px;
+  text-align: center;
+  background: #fffbf0; /* nền trắng */
+  color: #000000;      /* chữ đen */
+}
+.products h2 {
+  margin-bottom: 20px;
+  color: #000000; /* tiêu đề đen */
+}
+.product-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.product {
+  background: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+  transition: transform 0.2s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.product:hover {
+  transform: scale(1.05);
+}
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ===== New Products (Sản phẩm mới) ===== */
+.new-products {
+  padding: 40px 20px;
+  text-align: center;
+  background: #daeef8; /* nền trắng */
+  color: #000000;      /* chữ đen */
+}
+.new-products h2 {
+  margin-bottom: 20px;
+  color: #000000; /* tiêu đề đen */
+}
+
+/* Search box (thanh tìm kiếm*/
+.search-box {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.search-box input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+}
+.search-box button {
+  padding: 8px 15px;
+  border: none;
+  background: #fff;
+  color: #ff4d6d;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.search-box button:hover {
+  background: #e63950;
+  color: white;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #333; /* Nền đen */
+  color: white; /* Chữ trắng */
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px; /* Cách phía trên */
+}
+
+/* ===== Services (Dịch vụ) ===== */
+.services {
+  background: #fff0f3; /* Nền hồng nhạt */
+  padding: 40px 20px;
+  text-align: center;
+}
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.service {
+  background: #ffe0e6; /* Nền hồng nhẹ */
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+.service:hover {
+  text-decoration: underline;
+}
+
+/* ===== Reviews (Đánh giá khách hàng) ===== */
+.reviews {
+  background: #f9f9f9; 
+  padding: 40px 20px;
+  text-align: center;
+}
+.review-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.review {
+  background: #fff;
+  border-left: 5px solid #ff4d6d; /* Viền bên trái màu hồng */
+  padding: 15px;
+  width: 250px;
+  font-style: italic; /* Chữ in nghiêng */
+  border-radius: 5px;
+}
+
+
+/* ===== Contact (Liên hệ) ===== */
+.contact {
+  background: #ffd6de;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto 20px auto;
+  gap: 10px;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.contact button {
+  background: #ff4d6d;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact button:hover {
+  background: #e63950;
+}
+
+/* Thông tin liên hệ khác */
+.contact-info {
+  margin-top: 20px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+.contact-info h3 {
+  margin-bottom: 10px;
+  color: #ff4d6d;
+}
+
+
+
